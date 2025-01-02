@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* .roboto-regular {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+} */
+*{
+    font-family: var(--font-eng);
+}
+body{
+    background-image: url('/src//images/ecommerce_background.jpg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+}
+.carousel-item-1, .carousel-item-2, .carousel-item-3{
+    height: 100vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    justify-content: center;
+    color:#fff;
+}
+.carousel-item-1{ background-image: url('/src/images/banner.png');}
+.carousel-item-2{ background-image: url('/src/images/banner2.png');}
+.carousel-item-3{ background-image: url('/src/images/banner3.png');}
+:root{
+    --font-eng:"Roboto", sans-serif;
+    --bg-red:#DE3163;
+    --bg-black: #000;
+    --bg-white:#fff;
+}
+.carousel-item{
+    min-height: 85vh;
+}
+.box-banner-title{
+    margin-top: 30vh;
+}
+h2 span{
+    border-left: 4px solid red;
+}
+
+.box-discount{
+    background-image: url('../images/offer_img.jpg');
+    height: 70vh;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color:#fff;
+}
+
+.discount{
+    position: relative;
+}
+.discount .title{
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    color:#eee;
+}
+.discount .title h1{
+    font-size: 4rem;
+}
+
+.flex-box img{
+    width: 90px;
+}
+
+.box-banner-1 h1, .box-banner-2 h1, .box-banner-3 h1  {
+    font-size: 5rem;
+    font-weight: bold;
+}
+.box-banner-2 h1 {
+    font-style: italic
+}
+.box-banner-1 h2, .box-banner-2 h2, .box-banner-3 h2 {
+    font-size: 3rem;
+    font-style: italic;
+}
+.box-banner-1 .description, .box-banner-2 .description, .box-banner-3 .description {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+.box-banner-1 .order-btn,  .box-banner-2 .order-btn, .box-banner-3 .order-btn {
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+}
+.box-banner-1 .order-btn:hover, .box-banner-2 .order-btn:hover, .box-banner-3 .order-btn:hover {
+    background-color: var(--bg-black);
+    color: white;
+    border: 1px solid white;
+}
+.navbar-nav .nav-link .nav-link {
+    font-size: 1.4rem !important;
+}
+.navbar-nav .nav-link .nav-link:hover {
+    color: white !important;
+    text-shadow: 1px 1px 2px black, 0 0 25px gray, 0 0 5px rgb(59, 59, 59);
+}
+
+.navbar-brand{
+    width: 450px;
+    height: 10vh;
+}
+.navbar-brand span {
+    font-weight: bold;
+}
+.logo {
+    background-image: url(/src/images/KOMSOT.png);
+    width: 90px;
+    height: 90px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 100%;
+}
+
+/* Style tab links */
+.container .categories .tablink {
+    margin-top: 20px;
+    width: 150px;
+    height: 50px;
+    border: none;
+    background: none;
+    margin-left: 20px;
+    background-color: var(--bg-white);
+}
+
+.tablink:hover {
+  background: var(--bg-black) !important;
+  color: var(--bg-white);
+}
+
+/* Style the tab content (and add height:100% for full page content) */
+.tabcontent .row .box-img {
+    position: relative;
+}
+.tabcontent {
+  display: none;
+  padding: 100px 20px;
+  height: 100%;
+}
+
+/* Card */
+.product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: none; /* Remove default card border */
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Scale up on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.btn-light {
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-light:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    transform: scale(1.1); /* Scale button on hover */
+}
+
+/* MODAL */
+.modal-body{
+    width: 75% !important;
+}
+
+/* .activity-cart{
+    position: absolute;
+    width: 100%;
+    margin-left: 5px;
+}
+.activity-cart div .row {
+    margin-top: 10px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    cursor: pointer;
+    background-color: gainsboro;
+}
+.whished {
+    background-color: orange !important;
+    border: none !important;
+}
+.activity-cart div .row i {
+    font-size: 1.3rem;
+    margin-right: 5px;
+
+}
+.check {
+    color: orange !important;
+}
+
+.activity-cart-1{
+    display: none;
+} */
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .discount .title h1{
+        font-size: 2.5rem;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+   
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+   
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
