@@ -5,42 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cloth Website</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/src/css/index.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- header -->
+
     <header>
         <nav class="navbar navbar-expand-sm bg-light pt-4 pb-4">
-            <div class="container">
+            <div class="container-fluid">
                 <a class="navbar-brand d-flex align-items-center" href="#">
                     <div class="logo"></div>
-                    <span class="fs-4 fw-bold p-2">KOMSOT KHMER SHOP</span>
+                    <span class="fs-4 fw-bold p-2 text-black">KOMSOT KHMER SHOP</span>
                 </a>                
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#collapsibleNavbar">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavbar">
-                    <ul class="navbar-nav">                    
-                        <li class="nav-link text-center d-flex align-items-center justify-content-center p-2 rounded hover-bg-dark transition">
-                            <a class="nav-link text-dark" href="/src/view/my-card.html"> <i class="fa fa-shopping-cart"></i> Card</a>
-                        </li>
-                        <li class="nav-link text-center d-flex align-items-center justify-content-center p-2 rounded hover-bg-light transition">
-                            <a class="nav-link text-dark" href="/src/view/my-order.html"><i class="fa fa-shopping-basket"></i> My Order</a>
-                        </li>
-                        <li class="nav-link text-center d-flex align-items-center justify-content-center p-2 rounded hover-bg-light transition">
-                            <a class="nav-link text-dark" href="/src/view/my-wishlist.html"><i class="fa fa-heart-o"></i> Wishlist</a>
-                        </li>
-                        <li class="nav-link text-center d-flex align-items-center justify-content-center p-2 rounded hover-bg-light transition">
-                            <a class="nav-link text-dark" href="/src/view/my-shipping-address.html"><i class="fa fa-address-card-o"></i> Address</a>
-                        </li>
-                    </ul>
+                <div class="d-flex justify-content-end align-items-center" id="collapsibleNavbar">
+                    <form action="" class="w-30 mt-3">
+                        <div class="form-group d-flex">
+                            <input type="text" class="form-control" placeholder="Search.." name="search">
+                            <button type="submit" class="btn btn-light"><i class="fa fa-search"></i></button>
+                        </div>
+                    </form>
+                    <div class="w-20 d-flex justify-content-end align-items-center">
+                        <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
+                            <a href="" class="btn px-0">
+                                <i class="fas fa-heart text-primary f-1-3-rem"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                            </a>
+                            <a href="" class="btn px-0 ml-3">
+                                <i class="fas fa-shopping-cart text-primary f-1-3-rem"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                            </a>
+                            <a href="" class="btn px-0 ml-3">
+                                <i class="fas fa-map-marker-alt text-primary f-1-3-rem"></i>
+                                <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="w-20 d-flex justify-content-center">
+                        <div class="w-100 d-flex justify-content-center align-items-center">
+                            <strong class="m-2 f-1-3-rem text-black">Oun Bav</strong>
+                            <img src="/src//images//FlnMwB5XwAI-Y2J.png" class="avatar img-thumbnail rounded-circle w-25" lt="avatar">
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
-
         <!-- banner -->
         <div class="banner">
             <!-- Carousel -->
@@ -91,368 +106,264 @@
         <!-- ./banner -->
     </header>
     <!-- ./header -->
+     
 
-    <!-- Advertisement -->
-    <div class="container">
-        <div class="categories d-flex justify-content-center align-items-center">
-            <button class="tablink shadow-sm " onclick="openPage('Girl', this, 'var(--bg-black)', '#fff')" id="defaultOpen"><i class="fa fa-female"></i> Girl</button>
-            <button class="tablink shadow-sm" onclick="openPage('Women', this, 'var(--bg-black)', '#fff')"><i class="fa fa-female"></i> Women</button>
-            <button class="tablink shadow-sm" onclick="openPage('Boy', this, 'var(--bg-black)', '#fff')"><i class="fa fa-male"></i> Boy</button>
-            <button class="tablink shadow-sm" onclick="openPage('Men', this, 'var(--bg-black)', '#fff')"><i class="fa fa-male"></i> Men</button>
-            <button class="tablink shadow-sm" onclick="openPage('Kid', this, 'var(--bg-black)', '#fff')"><i class="fa fa-child"></i> Kid</button>
-            <button class="tablink shadow-sm" onclick="openPage('Baby', this, 'var(--bg-black)', '#fff')"><i class="fa fa-child"></i> Baby</button>
-            <button class="tablink shadow-sm" onclick="openPage('Pet', this, 'var(--bg-black)', '#fff')"><i class="fa fa-paw"></i> Pet</button>
-        </div>
-
-        <div id="Girl" class="tabcontent">
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
+    <div class="container-fluid shadow-sm">
+        <div class="row px-xl-5 pb-3 mt-3">
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light text-black mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-check text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Quality Product</h5>
                 </div>
             </div>
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light text-black mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-shipping-fast text-primary m-0 mr-2"></h1>
+                    <h5 class="font-weight-semi-bold m-0">Free Shipping</h5>
                 </div>
             </div>
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light text-black mb-4" style="padding: 30px;">
+                    <h1 class="fas fa-exchange-alt text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">14-Day Return</h5>
                 </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-12 pb-1">
+                <div class="d-flex align-items-center bg-light text-black mb-4" style="padding: 30px;">
+                    <h1 class="fa fa-phone-volume text-primary m-0 mr-3"></h1>
+                    <h5 class="font-weight-semi-bold m-0">24/7 Support</h5>
                 </div>
             </div>
         </div>
+        <div class="row px-xl-5 pt-0 pb-3 bg-light">
+            <div class="search-container">
+                <form action="">
+                    <div class="form-group d-flex">
+                        <div class="d-flex justify-content-between align-items-center w-100">
+                            <div class="w-50 d-flex justify-content-between align-items-center">
+                                <span class="text-black w-25 d-flex justify-content-center align-items-center">Rating : </span>
+                                <select class="form-control w-75" name="" id="">
+                                    <option value="">0</option>
+                                    <option value="">1</option>
+                                    <option value="">2</option>
+                                    <option value="">3</option>
+                                    <option value="">4</option>
+                                    <option value="">5</option>
+                                </select>
+                            </div>
+                            <div class="w-50 d-flex justify-content-between align-items-center">
+                                <span class="text-black w-50 d-flex justify-content-center align-items-center">From : </span>
+                                <input type="date" class="form-control" name="" id="">
+                                <span class="text-black w-50 d-flex justify-content-center align-items-center">To : </span>
+                                <input type="date" class="form-control" name="" id="">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-3 pt-3 text-black text-center" >All</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-3 pt-3 text-black text-center" >New</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-3 pt-3 text-black text-center" >Promotion</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-3 pt-3 text-black text-center" >Highest Rated</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-3 pt-3 text-black text-center" >Best Sale</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-3 pt-3 text-black text-center" >Highly recommend</div>
+            </div>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5" id="all">
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-2 pt-2 text-black text-center" onclick="openPage('Girl', this, 'var(--bg-black)', '#fff')" id="defaultOpen"><i class="fa fa-female"></i> Girl</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-2 pt-2 text-black text-center" onclick="openPage('Women', this, 'var(--bg-black)', '#fff')"><i class="fa fa-female"></i> Women</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-2 pt-2 text-black text-center" onclick="openPage('Boy', this, 'var(--bg-black)', '#fff')"><i class="fa fa-male"></i> Boy</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-2 pt-2 text-black text-center" onclick="openPage('Men', this, 'var(--bg-black)', '#fff')"><i class="fa fa-male"></i> Men</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-2 pt-2 text-black text-center" onclick="openPage('Kid', this, 'var(--bg-black)', '#fff')"><i class="fa fa-child"></i> Kid</div>
+                <div class="col-lg-2 col-md-4 col-sm-6 pb-2 pt-2 text-black text-center" onclick="openPage('Baby', this, 'var(--bg-black)', '#fff')"><i class="fa fa-child"></i> Baby</div>
+            </div>
+            <hr style="border: 1px solid #000;">
+        </div>
+    </div>
 
-        <div id="Boy" class="tabcontent">
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
+    <!-- Categories Start -->
+    <div class="container-fluid pt-5">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Categories</span></h2>
+        <hr style="border: 1px solid #000;">
+        <div class="row px-xl-5 pb-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-1.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
                         </div>
                     </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-2.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
                         </div>
                     </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </a>
             </div>
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-3.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
                         </div>
                     </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-4.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
                         </div>
                     </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-4.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-3.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-2.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-1.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-2.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-1.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-4.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <a class="text-decoration-none" href="">
+                    <div class="cat-item img-zoom d-flex align-items-center mb-4 bg-light">
+                        <div class="overflow-hidden" style="width: 100px; height: 100px;">
+                            <img class="img-fluid" src="/src/images/cat-3.jpg" alt="">
+                        </div>
+                        <div class="flex-fill pl-3">
+                            <h6>Category Name</h6>
+                            <small class="text-body">100 Products</small>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
+    </div>
+    <!-- Categories End -->
 
-        <div id="Men" class="tabcontent">
-            <div class="row">
+    <!-- Product List -->
+    <div class="container-fluid">
+
+        <div id="Girl" class="tabcontent container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Girl fashion</span></h2>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -461,16 +372,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -479,16 +389,66 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -498,16 +458,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -516,16 +476,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -534,16 +493,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -552,17 +510,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -571,16 +527,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -589,16 +544,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-6 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -610,17 +564,19 @@
             </div>
         </div>
 
-        <div id="Women" class="tabcontent">
-            <div class="row">
+        <div id="Boy" class="tabcontent container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Boy fashion</span></h2>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -629,16 +585,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -647,16 +602,66 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -666,16 +671,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -684,16 +689,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -702,16 +706,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -720,17 +723,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -739,16 +740,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -757,184 +757,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="Kid" class="tabcontent">
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Gray Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Red Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
-                            <div class="btn-group">
-                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
-                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            
-                <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
-                    <div class="card product-card">
-                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
-                        <div class="card-body">
-                            <h5 class="card-title">Name: Blue Shirt</h5>
-                            <p class="card-text">From: Komsot Khmer Shop</p>
-                            <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -946,17 +777,19 @@
             </div>
         </div>
 
-        <div id="Baby" class="tabcontent">
-            <div class="row">
+        <div id="Men" class="tabcontent container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Hansom men fashion</span></h2>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -965,16 +798,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -983,16 +815,66 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1002,16 +884,16 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1020,16 +902,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1038,16 +919,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1056,17 +936,15 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Gray Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $45.50</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1075,16 +953,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Red Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $55.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1093,16 +970,15 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
                             <h5 class="card-title">Name: Blue Shirt</h5>
                             <p class="card-text">From: Komsot Khmer Shop</p>
                             <p class="card-text"><strong>Price: $60.00</strong></p>
-                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
                             <div class="btn-group">
                                 <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
                                 <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
@@ -1114,10 +990,438 @@
             </div>
         </div>
 
-        <div id="Pet" class="tabcontent">
-            <div class="row">
+        <div id="Women" class="tabcontent container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Special Women fashion</span></h2>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-xl-5">
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Kid" class="tabcontent container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Kid fashion</span></h2>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row px-xl-5">
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-outline-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="Baby" class="tabcontent container-fluid">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Cute Bay fashion</span></h2>
+            <hr style="border: 1px solid #000;">
+            <div class="row px-xl-5">
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
@@ -1133,9 +1437,8 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
@@ -1151,9 +1454,59 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Blue Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $60.00</strong></p>
+                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Blue Shirt', 'Komsot Kher Shop', '$60.00', 'A stylish blue shirt for casual wear.', '/src/images/special_product_3.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 1 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Gray Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $45.50</strong></p>
+                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Gray Shirt', 'Komsot Kher Shop', '$45.50', 'A high-quality gray shirt.', '/src/images/special_product_1.jpg', ['/src/images/special_product_1.jpg', '/src/images/special_product_2.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
+                    <div class="card product-card">
+                        <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
+                        <div class="card-body">
+                            <h5 class="card-title">Name: Red Shirt</h5>
+                            <p class="card-text">From: Komsot Khmer Shop</p>
+                            <p class="card-text"><strong>Price: $55.00</strong></p>
+                            <a href="#" class="btn btn-dark">Order Now</a>
+                            <div class="btn-group">
+                                <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
+                                <button class="btn btn-light" onclick="viewDetails('Red Shirt', 'Komsot Kher Shop', '$55.00', 'A vibrant red shirt that stands out.', '/src/images/special_product_2.jpg', ['/src/images/special_product_2.jpg', '/src/images/special_product_3.jpg'])"><i class="fa fa-eye"></i></button>
+                                <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
@@ -1170,9 +1523,9 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row px-xl-5">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
@@ -1188,9 +1541,8 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
@@ -1206,9 +1558,8 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
@@ -1224,10 +1575,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <!-- Product Card 1 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
                         <div class="card-body">
@@ -1243,9 +1592,8 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 2 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_2.jpg" class="card-img-top" alt="Red Shirt">
                         <div class="card-body">
@@ -1261,9 +1609,8 @@
                         </div>
                     </div>
                 </div>
-            
                 <!-- Product Card 3 -->
-                <div class="col-12 col-sm-6 col-md-3 col-lg-4 mt-4">
+                <div class="col-lg-2 col-md-4 col-sm-6 mt-4">
                     <div class="card product-card">
                         <img src="/src/images/special_product_3.jpg" class="card-img-top" alt="Blue Shirt">
                         <div class="card-body">
@@ -1304,20 +1651,328 @@
         </div>
     </div>
 
-    <!-- Categories -->
-    <div class="category"></div>
-
-    <!-- Product list -->
-    <div class="product-list">
-        <!-- List all product tab-->
-
-        <!-- Best solve tab -->
-
-        <!-- Promotion Product tab -->
-
-        <!-- New Product tab-->
+    <!-- Offer Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <div class="row px-xl-5">
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="/src/images/offer-1.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="product-offer mb-30" style="height: 300px;">
+                    <img class="img-fluid" src="/src/images/offer-2.jpg" alt="">
+                    <div class="offer-text">
+                        <h6 class="text-white text-uppercase">Save 20%</h6>
+                        <h3 class="text-white mb-3">Special Offer</h3>
+                        <a href="" class="btn btn-primary">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- Footer -->
+    <!-- Offer End -->
+
+    <!-- Products Start -->
+    <div class="container-fluid pt-5 pb-3">
+        <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="pr-3">Recent Products</span></h2>
+        <hr style="border: 1px solid #000;">
+        <div class="row px-xl-5">
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-1.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-2.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-3.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                            <small class="far fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-4.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="far fa-star text-primary mr-1"></small>
+                            <small class="far fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-5.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-6.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-7.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star-half-alt text-primary mr-1"></small>
+                            <small class="far fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+                <div class="product-item bg-light mb-4">
+                    <div class="product-img position-relative overflow-hidden">
+                        <img class="img-fluid w-100" src="/src/images/product-8.jpg" alt="">
+                        <div class="product-action">
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-shopping-cart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
+                            <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+                    <div class="text-center py-4">
+                        <a class="h6 text-decoration-none text-truncate" href="">Product Name Goes Here</a>
+                        <div class="d-flex align-items-center justify-content-center mt-2">
+                            <h5>$123.00</h5><h6 class="text-muted ml-2"><del>$123.00</del></h6>
+                        </div>
+                        <div class="d-flex align-items-center justify-content-center mb-1">
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="fa fa-star text-primary mr-1"></small>
+                            <small class="far fa-star text-primary mr-1"></small>
+                            <small class="far fa-star text-primary mr-1"></small>
+                            <small>(99)</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Products End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-light text-black mt-5 pt-5">
+        <div class="row px-xl-5 pt-5">
+            <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
+                <h5 class="text-black text-uppercase mb-4">Get In Touch</h5>
+                <p class="mb-4">No dolore ipsum accusam no lorem. Invidunt sed clita kasd clita et et dolor sed dolor. Rebum tempor no vero est magna amet no</p>
+                <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>123 Street, New York, USA</p>
+                <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>info@example.com</p>
+                <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>+012 345 67890</p>
+            </div>
+            <div class="col-lg-8 col-md-12">
+                <div class="row">
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-black text-uppercase mb-4">Quick Shop</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                            <a class="text-black" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-black text-uppercase mb-4">My Account</h5>
+                        <div class="d-flex flex-column justify-content-start">
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Shop</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shop Detail</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Shopping Cart</a>
+                            <a class="text-black mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Checkout</a>
+                            <a class="text-black" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-5">
+                        <h5 class="text-black text-uppercase mb-4">Newsletter</h5>
+                        <p>Duo stet tempor ipsum sit amet magna ipsum tempor est</p>
+                        <form action="">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Your Email Address">
+                                <div class="input-group-append">
+                                    <button class="btn btn-primary">Sign Up</button>
+                                </div>
+                            </div>
+                        </form>
+                        <h6 class="text-black text-uppercase mt-4 mb-3">Follow Us</h6>
+                        <div class="d-flex">
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-primary btn-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a class="btn btn-primary btn-square" href="#"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row border-top mx-xl-5 py-4" style="border-color: rgba(256, 256, 256, .1) !important;">
+            <div class="col-md-6 px-xl-0">
+                <p class="mb-md-0 text-center text-md-left text-black">
+                    &copy; <a class="text-primary" href="#">Domain</a>. All Rights Reserved. Designed
+                    by
+                    <a class="text-primary" href="https://htmlcodex.com">HTML Codex</a>
+                </p>
+            </div>
+            <div class="col-md-6 px-xl-0 text-center text-md-right">
+                <img class="img-fluid" src="img/payments.png" alt="">
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
     <footer>
 
     </footer>
@@ -1325,5 +1980,7 @@
     <script src="/src/js/tabLink.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="/src/js/modal-view-detail.js"></script>
+
 </body>
 </html>
