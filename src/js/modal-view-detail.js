@@ -64,19 +64,23 @@ function viewDetails(name, shop, price, description, imgUrl, categories ) {
       <img class="w-100 p-2 shadow-sm" src=${imgUrl} alt="Gray Shirt" id="modalImage">
     </div>
     <div>
-      <p style="margin-top: 10px;"><strong>Name:</strong> ${name}t</p>
-      <p><strong>From:</strong> ${shop} </p>
-      <p><strong>Price:</strong> ${price}</p>
-      <p><strong>Description:</strong> ${description}</p>
-      <p><strong>Features:</strong></p>
-      <ul>
-          <li>Comfortable fit</li>
-          <li>Durable material</li>
-          <li>Available in various sizes</li>
-      </ul>
-      <div class="d-flex justify-content-center" style="background-color: #f0f8ff;">
+        <p style="margin-top: 10px;"><strong>Name:</strong> ${name}t</p>
+        <p><strong>From:</strong> ${shop} </p>
+        <p><strong>Price:</strong> ${price}</p>
+        <p><strong>Description:</strong> ${description}</p>
+        <p><strong>Features:</strong></p>
+        <ul>
+            <li>Comfortable fit</li>
+            <li>Durable material</li>
+            <li>Available in various sizes</li>
+        </ul>
+        <div class="d-flex justify-content-center" style="background-color: #f0f8ff;">
           ${categoriesElements}
-      </div>
+        </div>
+        <div class="d-flex justify-content-between align-items-center mt-2">
+            <button class="btn btn-primary w-50 m-1">Add To Card</button>
+            <button class="btn btn-primary w-50 m-1">Buy New</button>
+        </div>
     </div>
   </div>
   <h1 class="mt-4 mb-4 pl-3" style="border-left: 1px solid #000;">Related Product</h1>
