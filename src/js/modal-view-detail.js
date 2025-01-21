@@ -1,99 +1,181 @@
+function viewDetails(name, shop, price, description, imgUrl, categories) {
+    const modalBody = document.getElementById('modalBody');
 
+    // Generate category elements
+    const categoriesContainer = document.createElement('div');
+    categoriesContainer.className = 'd-flex justify-content-center';
+    categoriesContainer.style.backgroundColor = '#f0f8ff';
 
+    categories.forEach((category, index) => {
+        const categoryImg = document.createElement('img');
+        categoryImg.className = 'm-2 shadow-sm';
+        categoryImg.style.width = '15%';
+        categoryImg.style.cursor = 'pointer';
+        categoryImg.id = `category-${index}`;
+        categoryImg.src = category;
+        categoryImg.alt = 'Category Image';
+        categoryImg.addEventListener('click', () => ChangeImageCard(category));
+        categoriesContainer.appendChild(categoryImg);
+    });
 
-function viewDetails(name, shop, price, description, imgUrl, categories ) {
-  const modalBody = document.getElementById('modalBody');
-  let categoriesElements = '';
-  let recommendProductElements = '';
-  for(const category of categories) {
-    categoriesElements += `<img class="m-2 shadow-sm" style="width: 15%; cursor: pointer;" id="category-${categories.indexOf(category)}" src=${category} alt="Gray Shirt" onclick="ChangeImageCard('${category}')">`;
-  }
-  for (let i = 0; i < 4; i++) {
-    recommendProductElements+= `
-    <div class="row">
-      <div class="col-12 col-sm-6 col-md-3 col-lg-4">
-          <div class="card product-card">
-              <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-              <div class="card-body">
-                  <h5 class="card-title">Name: Gray Shirt</h5>
-                  <p class="card-text">From: Komsot Khmer Shop</p>
-                  <p class="card-text"><strong>Price: $45.50</strong></p>
-                  <a href="#" class="btn btn-dark">Order Now</a>
-                  <div class="btn-group">
-                      <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                      <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 col-lg-4">
-          <div class="card product-card">
-              <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-              <div class="card-body">
-                  <h5 class="card-title">Name: Gray Shirt</h5>
-                  <p class="card-text">From: Komsot Khmer Shop</p>
-                  <p class="card-text"><strong>Price: $45.50</strong></p>
-                  <a href="#" class="btn btn-dark">Order Now</a>
-                  <div class="btn-group">
-                      <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                      <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                  </div>
-              </div>
-          </div>
-      </div>
-      <div class="col-12 col-sm-6 col-md-3 col-lg-4">
-          <div class="card product-card">
-              <img src="/src/images/special_product_1.jpg" class="card-img-top" alt="Gray Shirt">
-              <div class="card-body">
-                  <h5 class="card-title">Name: Gray Shirt</h5>
-                  <p class="card-text">From: Komsot Khmer Shop</p>
-                  <p class="card-text"><strong>Price: $45.50</strong></p>
-                  <a href="#" class="btn btn-dark">Order Now</a>
-                  <div class="btn-group">
-                      <button class="btn btn-light"><i class="fa fa-heart-o"></i></button>
-                      <button class="btn btn-light"><i class="fa fa-shopping-cart"></i></button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>`;
-  }
-  modalBody.innerHTML = `
-  <div class="d-flex w-100">
-    <div class="w-100 d-flex justify-content-center">
-      <img class="w-100 p-2 shadow-sm" src=${imgUrl} alt="Gray Shirt" id="modalImage">
-    </div>
-    <div>
-        <p style="margin-top: 10px;"><strong>Name:</strong> ${name}t</p>
-        <p><strong>From:</strong> ${shop} </p>
-        <p><strong>Price:</strong> ${price}</p>
-        <p><strong>Description:</strong> ${description}</p>
-        <p><strong>Features:</strong></p>
-        <ul>
-            <li>Comfortable fit</li>
-            <li>Durable material</li>
-            <li>Available in various sizes</li>
-        </ul>
-        <div class="d-flex justify-content-center" style="background-color: #f0f8ff;">
-          ${categoriesElements}
-        </div>
-        <div class="d-flex justify-content-between align-items-center mt-2">
-            <button class="btn btn-primary w-50 m-1">Add To Card</button>
-            <button class="btn btn-primary w-50 m-1">Buy New</button>
-        </div>
-    </div>
-  </div>
-  <h1 class="mt-4 mb-4 pl-3" style="border-left: 1px solid #000;">Related Product</h1>
-  <div style="heigh">
-  ${recommendProductElements}
-  </div>
-  `;
-  $('#detailsModal').modal('show');
+    // Generate recommended products
+    const recommendProductContainer = document.createElement('div');
+    const productRow = document.createElement('div');
+    productRow.className = 'row';
+    for (let i = 0; i < 10; i++) {
+
+        const productCol = document.createElement('div');
+        productCol.className = 'col-sm-6 col-md-3 col-lg-6';
+
+        const productCard = document.createElement('div');
+        productCard.className = 'card product-card';
+
+        const productImg = document.createElement('img');
+        productImg.className = 'card-img-top';
+        productImg.src = '/src/images/special_product_1.jpg';
+        productImg.alt = 'Gray Shirt';
+
+        const cardBody = document.createElement('div');
+        cardBody.className = 'card-body';
+
+        const cardTitle = document.createElement('h5');
+        cardTitle.className = 'card-title';
+        cardTitle.textContent = 'Name: Gray Shirt';
+
+        const cardTextShop = document.createElement('p');
+        cardTextShop.className = 'card-text';
+        cardTextShop.textContent = 'From: Komsot Khmer Shop';
+
+        const cardTextPrice = document.createElement('p');
+        cardTextPrice.className = 'card-text';
+        cardTextPrice.innerHTML = '<strong>Price: $45.50</strong>';
+
+        const orderButton = document.createElement('a');
+        orderButton.href = '#';
+        orderButton.className = 'btn btn-dark';
+        orderButton.textContent = 'Order Now';
+
+        const btnGroup = document.createElement('div');
+        btnGroup.className = 'btn-group';
+
+        const heartButton = document.createElement('button');
+        heartButton.className = 'btn btn-light';
+        heartButton.innerHTML = '<i class="fa fa-heart-o"></i>';
+
+        const cartButton = document.createElement('button');
+        cartButton.className = 'btn btn-light';
+        cartButton.innerHTML = '<i class="fa fa-shopping-cart"></i>';
+
+        btnGroup.appendChild(heartButton);
+        btnGroup.appendChild(cartButton);
+
+        cardBody.appendChild(cardTitle);
+        cardBody.appendChild(cardTextShop);
+        cardBody.appendChild(cardTextPrice);
+        cardBody.appendChild(orderButton);
+        cardBody.appendChild(btnGroup);
+
+        productCard.appendChild(productImg);
+        productCard.appendChild(cardBody);
+
+        productCol.appendChild(productCard);
+        productRow.appendChild(productCol);
+
+        recommendProductContainer.appendChild(productRow);
+    }
+
+    // Clear modal body and set new content
+    modalBody.innerHTML = '';
+
+    const modalContent = document.createElement('div');
+    modalContent.className = 'd-flex w-100';
+
+    const imageContainer = document.createElement('div');
+    imageContainer.className = 'w-100 d-flex justify-content-center';
+
+    const modalImage = document.createElement('img');
+    modalImage.className = 'w-100 p-2 shadow-sm';
+    modalImage.src = imgUrl;
+    modalImage.alt = 'Gray Shirt';
+    modalImage.id = 'modalImage';
+
+    imageContainer.appendChild(modalImage);
+
+    const detailsContainer = document.createElement('div');
+
+    const nameParagraph = document.createElement('p');
+    nameParagraph.style.marginTop = '10px';
+    nameParagraph.innerHTML = `<strong>Name:</strong> ${name}`;
+
+    const shopParagraph = document.createElement('p');
+    shopParagraph.innerHTML = `<strong>From:</strong> ${shop}`;
+
+    const priceParagraph = document.createElement('p');
+    priceParagraph.innerHTML = `<strong>Price:</strong> ${price}`;
+
+    const descriptionParagraph = document.createElement('p');
+    descriptionParagraph.innerHTML = `<strong>Description:</strong> ${description}`;
+
+    const featuresParagraph = document.createElement('p');
+    featuresParagraph.innerHTML = '<strong>Features:</strong>';
+
+    const featuresList = document.createElement('ul');
+    ['Comfortable fit', 'Durable material', 'Available in various sizes'].forEach(feature => {
+        const featureItem = document.createElement('li');
+        featureItem.textContent = feature;
+        featuresList.appendChild(featureItem);
+    });
+
+    const buttonContainer = document.createElement('div');
+    buttonContainer.className = 'd-flex justify-content-between align-items-center mt-2';
+
+    const addToCartButton = document.createElement('button');
+    addToCartButton.className = 'btn btn-primary w-50 m-1';
+    addToCartButton.textContent = 'Add To Cart';
+
+    const buyNowButton = document.createElement('button');
+    buyNowButton.className = 'btn btn-primary w-50 m-1';
+    buyNowButton.textContent = 'Buy Now';
+
+    buttonContainer.appendChild(addToCartButton);
+    buttonContainer.appendChild(buyNowButton);
+
+    detailsContainer.appendChild(nameParagraph);
+    detailsContainer.appendChild(shopParagraph);
+    detailsContainer.appendChild(priceParagraph);
+    detailsContainer.appendChild(descriptionParagraph);
+    detailsContainer.appendChild(featuresParagraph);
+    detailsContainer.appendChild(featuresList);
+    detailsContainer.appendChild(categoriesContainer);
+    detailsContainer.appendChild(buttonContainer);
+
+    modalContent.appendChild(imageContainer);
+    modalContent.appendChild(detailsContainer);
+
+    const relatedHeader = document.createElement('h1');
+    relatedHeader.className = 'mt-4 mb-4 pl-3';
+    relatedHeader.style.borderLeft = '1px solid #000';
+    relatedHeader.textContent = 'Related Product';
+
+    modalBody.appendChild(modalContent);
+    modalBody.appendChild(relatedHeader);
+    modalBody.appendChild(recommendProductContainer);
+
+    // Show modal
+    const detailsModal = document.getElementById('detailsModal');
+    detailsModal.style.display = 'block';
+    detailsModal.classList.add('show');
 }
 
 function closeModal() {
-  $('#detailsModal').modal('hide');
+    const detailsModal = document.getElementById('detailsModal');
+    detailsModal.style.display = 'none';
+    detailsModal.classList.remove('show');
 }
+
 function ChangeImageCard(image) {
- $('#modalImage').attr('src', image);
+    const modalImage = document.getElementById('modalImage');
+    if (modalImage) {
+        modalImage.src = image;
+    }
 }

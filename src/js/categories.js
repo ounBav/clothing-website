@@ -38,7 +38,6 @@ function createCard() {
         card.appendChild(a);
         //append card to container
         cardContainer.appendChild(card);
-        console.log(card);
     }
 }
 var categoriesNames = [
