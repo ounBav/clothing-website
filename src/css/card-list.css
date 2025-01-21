@@ -1,0 +1,23 @@
+.cart-container {
+    padding: 30px;
+  }
+  .cart-totals {
+    background-color: #5374ff;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .cart-totals h5 {
+    font-weight: bold;
+  }
+  .cart-totals .btn-checkout {
+    background-color: #ff6b6b;
+    border: none;
+    font-weight: bold;
+  }
+  .cart-totals .btn-checkout:hover {
+    background-color: #e55b5b;
+  }
+  .discount-section input {
+    border-radius: 20px;
+  }
