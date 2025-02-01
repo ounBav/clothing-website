@@ -10,10 +10,11 @@ function openPage(pageName,element) {
     tabLinks = document.getElementsByClassName("tablink");
     for (i = 0; i < tabLinks.length; i++) {
       tabLinks[i].style.textDecoration = "none";
-      tabLinks[i].classList.remove('active', 'bg-primary');
+      tabLinks[i].classList.remove('btn-outline-primary');
     }
     document.getElementById(pageName).style.display = "block";
     // Adding Style
     element.style.textDecoration = "underline"; 
-    element.classList.add('active', 'bg-primary');
+    element.classList.remove('btn-outline-dark');
+    element.classList.add('btn-outline-primary');
 }
