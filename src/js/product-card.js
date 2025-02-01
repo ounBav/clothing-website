@@ -91,9 +91,8 @@ var products = [
 ];
 // Create a function to generate the product card
 function createProductCard() {
-    // const productCardRow = document.getElementById("womentCard");
-    // Create the outer container
-    
+    const rowDiv = document.createElement('div');
+    rowDiv.className = 'row px-xl-5';
     for(const product of products) {    
         const colDiv = document.createElement('div');
         colDiv.className = 'col-lg-3 col-md-4 col-sm-6 mt-4';
@@ -187,13 +186,20 @@ function createProductCard() {
     
         // Append the card container to the outer container
         colDiv.appendChild(cardDiv);
-    
-        // Append the product card to the desired parent element in your HTML
-        const parentElement = document.querySelector('#womentCard'); // Replace with your actual container ID
-        parentElement.appendChild(colDiv);
+
+        rowDiv.appendChild(colDiv);
     }
+    return rowDiv;
 }
 
+function insertToParent(id) {
+    const productCard = createProductCard();
+    const parentElement = document.querySelector(id);
+    parentElement.appendChild(productCard);
+}
 // Call the function to create the product card
-createProductCard();
+insertToParent('#girlCard')
+insertToParent('#boyCard')
+insertToParent('#kidCard')
+insertToParent('#bayCard')
 

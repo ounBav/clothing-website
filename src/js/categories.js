@@ -11,7 +11,7 @@ function createCard() {
         a.href = '';
         //body of img and title
         var body = document.createElement("div");
-        body.className = "cat-item img-zoom d-flex align-items-center mb-4 bg-light";
+        body.className = "cat-item img-zoom d-flex align-items-center mb-4 bg-light shadow-sm";
         //body of image
         var imgDiv = document.createElement("div");
         imgDiv.className = "overflow-hidden";
@@ -45,13 +45,14 @@ var categoriesNames = [
     { name: "Fashion & Apparel", quantity: 25, imgUrl: "/src/images/cat-2.jpg" },
     { name: "Beauty & Personal Care", quantity: 8, imgUrl: "/src/images/cat-3.jpg" },
     { name: "Sports & Outdoors", quantity: 12, imgUrl: "/src/images/cat-4.jpg" },
-    { name: "Books & Stationery", quantity: 15, imgUrl: "/src/images/cat-3.jpg" },
-    { name: "Toys & Games", quantity: 21, imgUrl: "/src/images/cat-1.jpg" },
-    { name: "Health & Wellness", quantity: 34, imgUrl: "/src/images/cat-2.jpg" },
-    { name: "Groceries & Gourmet", quantity: 56, imgUrl: "/src/images/cat-1.jpg" },
-    { name: "Automotive & Tools", quantity: 32, imgUrl: "/src/images/cat-4.jpg" },
-    { name: "Baby & Kids", quantity: 12, imgUrl: "/src/images/cat-1.jpg" },
-    { name: "Jewelry & Accessories", quantity: 43, imgUrl: "/src/images/cat-2.jpg" }
+    { name: "Books & Stationery", quantity: 15, imgUrl: "/src/images/cat-1.jpg" },
+    { name: "Toys & Games", quantity: 21, imgUrl: "/src/images/cat-2.jpg" },
+    { name: "Health & Wellness", quantity: 34, imgUrl: "/src/images/cat-3.jpg" },
+    { name: "Groceries & Gourmet", quantity: 56, imgUrl: "/src/images/cat-4.jpg" },
+    { name: "Automotive & Tools", quantity: 32, imgUrl: "/src/images/cat-1.jpg" },
+    { name: "Baby & Kids", quantity: 12, imgUrl: "/src/images/cat-2.jpg" },
+    { name: "Jewelry & Accessories", quantity: 43, imgUrl: "/src/images/cat-3.jpg" },
+    { name: "Jewelry & Accessories", quantity: 43, imgUrl: "/src/images/cat-4.jpg" }
 ];
 //create card
 createCard();

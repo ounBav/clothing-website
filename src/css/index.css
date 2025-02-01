@@ -542,38 +542,34 @@ body{
     width: 100%;
 }
 
-/* .activity-cart{
-    position: absolute;
-    width: 100%;
-    margin-left: 5px;
+.review-carousel-item{
+  min-height: 20vh !important;
 }
-.activity-cart div .row {
-    margin-top: 10px;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-    cursor: pointer;
-    background-color: gainsboro;
-}
-.whished {
-    background-color: orange !important;
-    border: none !important;
-}
-.activity-cart div .row i {
-    font-size: 1.3rem;
-    margin-right: 5px;
-
-}
-.check {
-    color: orange !important;
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 50px !important;
+  height: 50px !important;
+  padding: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #e7e4e4 !important; 
+  border: none; /* Add a subtle border */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add a slight shadow */
 }
 
-.activity-cart-1{
-    display: none;
-} */
+.carousel-indicators [data-bs-target] {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ccc; /* Default inactive color */
+}
+
+.carousel-indicators [data-bs-target].active {
+  background-color: #e7e4e4; /* Active indicator color */
+  width: 16px;
+  height: 16px; 
+}
 
 
 /* Extra small devices (phones, 600px and down) */
